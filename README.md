@@ -14,4 +14,4 @@ On your machine:
 ssh -L 9000:lectura.cs.arizona.edu:8000 lectura
 ```
 
-Then visit localhost:9000 in your browser.
+Then visit `localhost:9000` in your browser.
