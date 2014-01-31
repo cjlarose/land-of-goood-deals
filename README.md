@@ -1,3 +1,23 @@
+## Work 
+
+### Dave 
+
+* about.html
+* addcomment.html
+* cart.html
+* index.html
+* shipping.html
+* thankyou.html
+
+### Chris
+
+* blog.html
+* article.html
+* product.html
+* products.html
+* total.html
+
+
 ## Setup
 On lectura:
 
