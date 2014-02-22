@@ -169,8 +169,8 @@ header h1 #tagline {
 
 .zebra-stripes {
     border-spacing: 0;
-    width: 100%;
-    margin-bottom: 1.5em;
+    width: 95%;
+    margin: 1.5em;
 }
 
 .zebra-stripes td, .zebra-stripes th {
@@ -249,7 +249,9 @@ header h1 #tagline {
    margin: 0 auto;
 }
 
-#shipsubmit {
+.shipsubmit {
+   margin: 0 auto;
+   display: block;
    font-size: 120%;
    background-color: hsl(102, 27%, 47%);
    height: 50px;
@@ -281,4 +283,11 @@ header h1 #tagline {
 
 #product-sidebar .price {
     font-weight: bold;
+}
+
+/*
+ * Cart
+ */
+.carttotal {
+   font-weight: bold;
 }
