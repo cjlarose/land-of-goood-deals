@@ -1,3 +1,12 @@
+/* 
+ * Global styles
+ */
+body {
+    font-family: sans-serif;
+    width: 960px;
+    margin: 0 auto;
+}
+
 /*
  * Navigation (Suckerfish: http://alistapart.com/article/dropdowns)
  */
@@ -6,12 +15,26 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    background-color: hsl(102, 27%, 47%);
 }
 
 #navigation li {
-    float: left;
+    display: inline-block;
+    /* Changed from suckerfish, because modern IE understands inline-block and 
+       suckerfish is from 2003 */
     position: relative;
     width: 10em;
+}
+
+#navigation li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+    color: #fff;
+}
+
+#navigation > ul > li:hover {
+    background-color: hsl(0, 0%, 20%);
 }
 
 #navigation li ul {
@@ -24,6 +47,14 @@
 #navigation li > ul {
     top: auto;
     left: auto;
+}
+
+#navigation li > ul li {
+    background-color: hsl(102, 57%, 47%);
+}
+
+#navigation li > ul li:hover {
+    background-color: hsl(0, 0%, 40%);
 }
 
 #navigation li:hover ul {
