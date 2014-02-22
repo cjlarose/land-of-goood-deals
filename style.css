@@ -147,3 +147,28 @@ header h1 #tagline {
     float: right;
     margin: 0 0 20px 20px;
 }
+
+/*
+ * Tables
+ */
+
+.zebra-stripes {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.zebra-stripes td, .zebra-stripes th {
+    padding: 4px 7px; 
+}
+
+.zebra-stripes th {
+    border-bottom: 1px solid #000;
+}
+
+.zebra-stripes th {
+    text-align: left;
+}
+
+.zebra-stripes tbody tr:nth-child(odd) {
+    background-color: hsl(102, 27%, 77%);
+}
