@@ -155,6 +155,7 @@ header h1 #tagline {
 .zebra-stripes {
     border-spacing: 0;
     width: 100%;
+    margin-bottom: 1.5em;
 }
 
 .zebra-stripes td, .zebra-stripes th {
@@ -171,4 +172,17 @@ header h1 #tagline {
 
 .zebra-stripes tbody tr:nth-child(odd) {
     background-color: hsl(102, 27%, 77%);
+}
+
+/*
+ * Total page
+ */
+
+#complete-order {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 20px;
+    background-color: hsl(102, 27%, 77%);
+    border: 1px solid #333;
+    font-size: 1.5em;
 }
