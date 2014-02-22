@@ -1,12 +1,25 @@
+/*
+ * Authors:
+ * 
+ * Dave Fei
+ * Chris LaRose
+ * 
+ */
+
 /* 
  * Global styles
  */
 body {
     font-family: sans-serif;
-    width: 960px;
-    margin: 0 auto;
     font-size: 14px;
     line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header, #content {
+    width: 960px;
+    margin: 0 auto;
 }
 
 #homepage-image {
@@ -16,7 +29,9 @@ body {
 footer {
     text-align: center;
     color: hsl(0, 0%, 60%);
-    margin: 3em 0;
+    padding: 3em 0;
+    background-color: hsl(0, 0%, 90%);
+    margin-top: 3em;
 }
 
 h3 {
@@ -32,7 +47,7 @@ header {
 
 header h1 {
     font-size: 2em;
-    margin: 0;
+    margin: 0 0 0.5em 0;
 }
 
 header h1 a {
@@ -51,7 +66,7 @@ header h1 #tagline {
 
 #navigation ul {
     padding: 0;
-    margin: 0 0 1.5em;
+    margin: 0;
     list-style: none;
     background-color: hsl(102, 27%, 47%);
 }
@@ -239,4 +254,31 @@ header h1 #tagline {
    background-color: hsl(102, 27%, 47%);
    height: 50px;
    width: 125px;
+}
+
+/*
+ * Product page
+ */
+#product-sidebar {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+#product-image {
+    border: 1px solid hsl(0, 0%, 60%);
+}
+
+#purchase-form fieldset {
+    background-color: hsl(120, 50%, 50%);
+    border: 1px solid hsl(0, 0%, 60%);
+}
+
+#purchase-form legend {
+    background-color: hsl(120, 50%, 40%);
+    border: 1px solid hsl(0, 0%, 60%);
+    padding: 5px;
+}
+
+#product-sidebar .price {
+    font-weight: bold;
 }
