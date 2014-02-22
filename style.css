@@ -190,19 +190,6 @@ header h1 #tagline {
 }
 
 /*
- * Total page
- */
-
-#complete-order {
-    margin: 0 auto;
-    display: block;
-    padding: 10px 20px;
-    background-color: hsl(102, 27%, 77%);
-    border: 1px solid #333;
-    font-size: 1.5em;
-}
-
-/*
  * Products page
  */
 
@@ -249,13 +236,14 @@ header h1 #tagline {
    margin: 0 auto;
 }
 
-.shipsubmit {
+.button-primary {
    margin: 0 auto;
    display: block;
    font-size: 120%;
    background-color: hsl(102, 27%, 47%);
    height: 50px;
-   width: 125px;
+   width: 200px;
+   border: 1px solid #000;
 }
 
 /*
