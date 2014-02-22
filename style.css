@@ -1,17 +1,78 @@
+/* 
+ * Global styles
+ */
+body {
+    font-family: sans-serif;
+    width: 960px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#homepage-image {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    color: hsl(0, 0%, 60%);
+    margin-top: 1.5em;
+}
+
+h3 {
+    margin: 0 0 0.5em 0;
+}
+
+/*
+ * Header
+ */
+header {
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: hsl(194, 97%, 39%);
+}
+
+header h1 #tagline {
+    display: block;
+    font-size: .5em;
+}
+
 /*
  * Navigation (Suckerfish: http://alistapart.com/article/dropdowns)
  */
 
 #navigation ul {
     padding: 0;
-    margin: 0;
+    margin: 0 0 1.5em;
     list-style: none;
+    background-color: hsl(102, 27%, 47%);
 }
 
 #navigation li {
-    float: left;
+    display: inline-block;
+    /* Changed from suckerfish, because modern IE understands inline-block and 
+       suckerfish is from 2003 */
     position: relative;
     width: 10em;
+}
+
+#navigation li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+    color: #fff;
+}
+
+#navigation > ul > li:hover {
+    background-color: hsl(0, 0%, 20%);
 }
 
 #navigation li ul {
@@ -19,6 +80,7 @@
     position: absolute; 
     top: 1em;
     left: 0;
+    z-index: 10;
 }
 
 #navigation li > ul {
@@ -26,10 +88,45 @@
     left: auto;
 }
 
+#navigation li > ul li {
+    background-color: hsl(102, 17%, 47%);
+}
+
+#navigation li > ul li:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
 #navigation li:hover ul {
     display: block;
 }
 
+/*
+ * Blog entries 
+ */
+#blog-entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#blog-entries li {
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+    padding: 20px 0 20px 120px;
+    position: relative;
+    height: 100px;
+}
+
+#blog-entries li img {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 100px;
+    width: 100px;
+}
+
+/*
+ * Add comment
+ */
 .commborder {
    float: left;
    width: 67%;
@@ -41,3 +138,4 @@
    font-weight: bold;
    color: #0640;
 }
+
