@@ -1,28 +1,31 @@
+<h2>Shipping Information</h2>
 <form action="total.html" method="GET">
-   <fieldset>
+   <fieldset class="ship">
       <legend>Shipping Information</legend>
-      <label for="nameText">Name</label>
+      <label class="shiplabel" for="nameText">Name</label>
       <input type="text" name="nameText" value="" id="nameText" /><br />
-      <label for="addText">Address</label>
+      <label class="shiplabel" for="addText">Address</label>
       <input type="text" name="addText" value="" id="addText" /><br />
-      <label for="cityText">City</label>
+      <label class="shiplabel" for="cityText">City</label>
       <input type="text" name="cityText" value="" id="cityText" /><br />
-      <label for="states">State</label>
+      <label class="shiplabel" for="states">State</label>
       <select name="state" id="states">
-         <option value="AZ">AZ</option>
-         <option value="GA">GA</option>
-         <option value="SC">SC</option>
-      </select>
-      <label for="emailText">Email</label>
+         <option value="AZ">Arizona</option>
+         <option value="GA">Georgia</option>
+         <option value="SC">South Carolina</option>
+      </select><br />
+      <label class="shiplabel" for="emailText">Email</label>
       <input type="text" name="emailText" value="" id="emailText" /><br />
-      <label for="phoneText">Phone</label>
+      <label class="shiplabel" for="phoneText">Phone</label>
       <input type="text" name="phoneText" value="" id="phoneText" /><br />
-      <input type="radio" name="date" value="next" id="nextD" />
-      <label for="nextD">Next Day</label><br />
-      <input type="radio" name="date" value="sec" id="secD" />
-      <label for="secD">Second Day</label><br />
-      <input type="radio" name="date" value="ground" id="groundD" />
-      <label for="groundD">Ground</label><br />
-      <input type="submit" value="Submit" />
+      <div id="shipinput">
+         <input type="radio" name="date" value="next" id="nextD" />
+         <label for="nextD">Next Day</label><br />
+         <input type="radio" name="date" value="sec" id="secD" />
+         <label for="secD">Second Day</label><br />
+         <input type="radio" name="date" value="ground" id="groundD" />
+         <label for="groundD">Ground</label><br />
+         <input type="submit" value="Submit" id="shipsubmit"/>
+      </div>
    </fieldset>
 </form>

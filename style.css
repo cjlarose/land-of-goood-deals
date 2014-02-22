@@ -124,6 +124,9 @@ header h1 #tagline {
     width: 100px;
 }
 
+/*
+ * Add Comment page
+*/
 #comm {
    height: 200px;
    width: 35%;
@@ -210,4 +213,30 @@ header h1 #tagline {
 
 #product-list a {
     text-decoration: none;
+}
+
+/*
+ * Shipping page
+ */
+.ship {
+   margin: 0 auto;
+   width: 38%;
+   line-height: 150%;
+}
+
+.shiplabel {
+   display: inline-block;
+   width: 150px;
+}
+
+#shipinput {
+   width: 125px;
+   margin: 0 auto;
+}
+
+#shipsubmit {
+   font-size: 120%;
+   background-color: hsl(102, 27%, 47%);
+   height: 50px;
+   width: 125px;
 }
