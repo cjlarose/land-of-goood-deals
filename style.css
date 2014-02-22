@@ -124,18 +124,15 @@ header h1 #tagline {
     width: 100px;
 }
 
-/*
- * Add comment
- */
-.commborder {
-   float: left;
-   width: 67%;
-   left: 200px;
+#comm {
+   height: 200px;
+   width: 35%;
 }
 
 .addcomm {
-   font-family: serif;
+   font-size: 120%;
    font-weight: bold;
-   color: #0640;
+   background-color: hsl(102, 27%, 47%);
+   height: 50px;
 }
 
