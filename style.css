@@ -7,13 +7,17 @@ body {
     margin: 0 auto;
 }
 
+#homepage-image {
+    max-width: 100%;
+}
+
 /*
  * Navigation (Suckerfish: http://alistapart.com/article/dropdowns)
  */
 
 #navigation ul {
     padding: 0;
-    margin: 0;
+    margin: 0 0 1em;
     list-style: none;
     background-color: hsl(102, 27%, 47%);
 }
