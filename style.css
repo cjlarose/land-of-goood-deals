@@ -139,3 +139,11 @@ header h1 #tagline {
    color: #0640;
 }
 
+/*
+ * Blog Article
+ */
+
+.article-image {
+    float: right;
+    margin: 0 0 20px 20px;
+}
