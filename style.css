@@ -16,7 +16,7 @@ body {
 footer {
     text-align: center;
     color: hsl(0, 0%, 60%);
-    margin-top: 1.5em;
+    margin: 3em 0;
 }
 
 h3 {
