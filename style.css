@@ -29,3 +29,15 @@
 #navigation li:hover ul {
     display: block;
 }
+
+.commborder {
+   float: left;
+   width: 67%;
+   left: 200px;
+}
+
+.addcomm {
+   font-family: serif;
+   font-weight: bold;
+   color: #0640;
+}
