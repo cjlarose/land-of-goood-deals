@@ -80,6 +80,7 @@ header h1 #tagline {
     position: absolute; 
     top: 1em;
     left: 0;
+    z-index: 10;
 }
 
 #navigation li > ul {
@@ -110,12 +111,15 @@ header h1 #tagline {
 
 #blog-entries li {
     border-bottom: 1px solid hsl(0, 0%, 70%);
-    padding: 1.5em 0 1.5em 100px;
+    padding: 20px 0 20px 120px;
     position: relative;
+    height: 100px;
 }
 
 #blog-entries li img {
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 0;
+    height: 100px;
+    width: 100px;
 }
