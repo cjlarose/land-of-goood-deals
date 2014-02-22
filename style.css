@@ -186,3 +186,31 @@ header h1 #tagline {
     border: 1px solid #333;
     font-size: 1.5em;
 }
+
+/*
+ * Products page
+ */
+
+#product-list {
+    margin: 0 0 0 -20px;
+    padding: 0;
+}
+
+#product-list li {
+    display: inline-block;
+    border: 1px solid #000;
+    margin: 0 0 20px 20px;
+    text-align: center;
+    width: 282px;
+    padding: 10px;
+}
+
+#product-list img {
+    max-height: 250px;
+    display: block;
+    margin: 0 auto 1.5em;
+}
+
+#product-list a {
+    text-decoration: none;
+}
