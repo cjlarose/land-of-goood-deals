@@ -16,7 +16,7 @@ body {
 footer {
     text-align: center;
     color: hsl(0, 0%, 60%);
-    margin-top: 1.5em;
+    margin: 3em 0;
 }
 
 h3 {
@@ -136,3 +136,78 @@ header h1 #tagline {
    height: 50px;
 }
 
+/*
+ * Blog Article
+ */
+
+.article-image {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+/*
+ * Tables
+ */
+
+.zebra-stripes {
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.zebra-stripes td, .zebra-stripes th {
+    padding: 4px 7px; 
+}
+
+.zebra-stripes th {
+    border-bottom: 1px solid #000;
+}
+
+.zebra-stripes th {
+    text-align: left;
+}
+
+.zebra-stripes tbody tr:nth-child(odd) {
+    background-color: hsl(102, 27%, 77%);
+}
+
+/*
+ * Total page
+ */
+
+#complete-order {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 20px;
+    background-color: hsl(102, 27%, 77%);
+    border: 1px solid #333;
+    font-size: 1.5em;
+}
+
+/*
+ * Products page
+ */
+
+#product-list {
+    margin: 0 0 0 -20px;
+    padding: 0;
+}
+
+#product-list li {
+    display: inline-block;
+    border: 1px solid #000;
+    margin: 0 0 20px 20px;
+    text-align: center;
+    width: 282px;
+    padding: 10px;
+}
+
+#product-list img {
+    max-height: 250px;
+    display: block;
+    margin: 0 auto 1.5em;
+}
+
+#product-list a {
+    text-decoration: none;
+}
