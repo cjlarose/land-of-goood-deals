@@ -11,10 +11,15 @@
  */
 body {
     font-family: sans-serif;
-    width: 960px;
-    margin: 0 auto;
     font-size: 14px;
     line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header, #content {
+    width: 960px;
+    margin: 0 auto;
 }
 
 #homepage-image {
@@ -24,7 +29,9 @@ body {
 footer {
     text-align: center;
     color: hsl(0, 0%, 60%);
-    margin: 3em 0;
+    padding: 3em 0;
+    background-color: hsl(0, 0%, 90%);
+    margin-top: 3em;
 }
 
 h3 {
@@ -40,7 +47,7 @@ header {
 
 header h1 {
     font-size: 2em;
-    margin: 0;
+    margin: 0 0 0.5em 0;
 }
 
 header h1 a {
@@ -59,7 +66,7 @@ header h1 #tagline {
 
 #navigation ul {
     padding: 0;
-    margin: 0 0 1.5em;
+    margin: 0;
     list-style: none;
     background-color: hsl(102, 27%, 47%);
 }
