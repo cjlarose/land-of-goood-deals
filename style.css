@@ -1,0 +1,31 @@
+/*
+ * Navigation (Suckerfish: http://alistapart.com/article/dropdowns)
+ */
+
+#navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#navigation li {
+    float: left;
+    position: relative;
+    width: 10em;
+}
+
+#navigation li ul {
+    display: none;
+    position: absolute; 
+    top: 1em;
+    left: 0;
+}
+
+#navigation li > ul {
+    top: auto;
+    left: auto;
+}
+
+#navigation li:hover ul {
+    display: block;
+}
