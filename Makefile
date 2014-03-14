@@ -12,6 +12,7 @@ FOOTER_FILE = include/footer.html
 all: directories $(OBJECTS) $(BUILD_DIR)/images $(BUILD_DIR)/style.css
 
 directories:
+	rm -f $(BUILD_DIR)/js $(BUILD_DIR)/json
 	mkdir -p $(BUILD_DIR)
 	ln -s $(SRC_DIR)/js $(BUILD_DIR)/js
 	ln -s $(SRC_DIR)/json $(BUILD_DIR)/json
