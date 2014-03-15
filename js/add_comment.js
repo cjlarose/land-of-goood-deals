@@ -11,7 +11,7 @@ $(document).ready(function() {
             content: content
         };
 
-        $.post("json/postcomment.php").done(function(data) {
+        $.post("json/postcomment.php", payload).done(function(data) {
             data = JSON.parse(data);
 
             if (!data.length)
