@@ -1,0 +1,13 @@
+[{
+    "image": "images/Image.jpg",
+    "link": "index.html",
+    "alt": "Land of Oo"
+}, {
+    "image": "images/jake-banner.jpg",
+    "link": "product.html?p=3",
+    "alt": "Jake"
+}, {
+    "image": "images/faces-banner.png",
+    "link": "product.html?p=2",
+    "alt": "Full Cast"
+}]
