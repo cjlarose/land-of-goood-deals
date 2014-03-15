@@ -7,7 +7,9 @@ $(document).ready(function() {
             email: email,
             content: content
         };
-        $.post("json/postcomment.php", "json").done(function(data) {
+        $.post("json/postcomment.php").done(function(data) {
+            data = JSON.parse(data);
+
             if (!data.length)
                 throw "Malformed response";
 
