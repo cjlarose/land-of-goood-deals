@@ -12,11 +12,11 @@ function validateForm(form) {
    var inputSec = $("#secD").val();
    var inputGround= $("#groundD").val();
 
-   var badName = newRegExp("[^A-Za-z\s]");
-   var badAdd = newRegExp("[^0-9A-Za-z\s]");
-   var badCity = newRegExp("[^A-Za-z]");
-   var goodEmail = newRegExp(".+@.+\..+");
-   var goodPhone = newRegExp("\d{3}-\d{3}-\d{4}");
+   var badName = new RegExp("[^A-Za-z\s]");
+   var badAdd = new RegExp("[^0-9A-Za-z\s]");
+   var badCity = new RegExp("[^A-Za-z]");
+   var goodEmail = new RegExp(".+@.+\..+");
+   var goodPhone = new RegExp("\d{3}\-\d{3}\-\d{4}");
 
    var isBadName = badName.test(inputName);
    var isBadAdd = badAdd.test(inputAdd);
@@ -24,25 +24,25 @@ function validateForm(form) {
    var isGoodEmail = goodEmail.test(inputEmail);
    var isGoodPhone = goodPhone.test(inputPhone);
 
-   if (inputName == null || isBadName) {
+   if (inputName === "" || isBadName) {
       errormsg = "Enter an appropriate name.\n";
       noError = false;
-   } if (inputAdd == null || isBadAdd) {
+   } if (inputAdd === "" || isBadAdd) {
       errormsg = errormsg + "Enter an appropriate address.\n";
       noError = false;
-   } if (inputCity == null || isBadCity) {
+   } if (inputCity === "" || isBadCity) {
       errormsg = errormsg + "Enter an appropriate city.\n";
       noError = false;
-   } if (inputState == null) {
+   } if (inputState === "") {
       errormsg = errormsg + "Select a state.\n";
       noError = false;
    } if (!isGoodEmail) {
       errormsg = errormsg + "Enter an appropriate email address.\n";
       noError = false;
-   } if (inputPhone != null && !isGoodPhone) {
-      errormsg = errormsg + "If provided, enter an appropriate phone number.\n";
+   } if (inputPhone !== "" && !isGoodPhone) {
+      errormsg = errormsg + "If provided, enter an appropriate phone number of the form xxx-xxx-xxxx.\n";
       noError = false;
-   } if (inputNext == null && inputSec == null && inputGround == null) {
+   } if (inputNext === "" && inputSec === "" && inputGround === "") {
       errormsg = errormsg + "Select a shipping option.\n";
       noError = false;
    }
@@ -54,6 +54,9 @@ function validateForm(form) {
    return noError;
 }
 
-$("#shipping-form").submit(function(event) {
-   return validateForm(this); 
+$(document).ready(function() {
+    $("#shipping-form").submit(function(event) {
+        event.preventDefault();
+        return validateForm(this); 
+    });
 });
