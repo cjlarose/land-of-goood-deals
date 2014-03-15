@@ -21,8 +21,10 @@ $(document).ready(function() {
             if (data[0]["status"] != "good")
                 alert("Unable to publish comment");
 
+            var name = email.indexOf("@") != -1 ? email.substring(0, email.indexOf("@")) : email;
+
             $("<li>")
-                .append($("<span>").addClass("author").append(email))
+                .append($("<span>").addClass("author").append(name))
                 .append($("<time>").append(new Date()))
                 .append($("<p>").append(content))
                 .appendTo("#blog-comments");
