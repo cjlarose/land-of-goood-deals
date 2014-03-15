@@ -1,5 +1,6 @@
+<script src="js/form_validation.js"></script>
 <h2>Shipping Information</h2>
-<form action="total.html" method="GET">
+<form action="total.html" method="GET" id="shipping-form">
    <fieldset class="ship">
       <legend>Shipping Information</legend>
       <label class="shiplabel" for="nameText">Name</label>
@@ -26,6 +27,6 @@
          <input type="radio" name="date" value="ground" id="groundD" />
          <label for="groundD">Ground</label><br />
       </div>
-      <input type="submit" value="Submit" class="button-primary"/>
+      <input type="submit" value="Submit" class="button-primary" onclick="return validateForm();" />
    </fieldset>
 </form>
