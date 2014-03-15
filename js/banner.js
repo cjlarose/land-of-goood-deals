@@ -15,5 +15,5 @@ $(document).ready(function() {
         }, 'json');
     }
 
-    rotateBanner($("#homepage-link"), "json/banner_images.js");
+    rotateBanner($("#homepage-link"), "json/banner_images.json");
 });
