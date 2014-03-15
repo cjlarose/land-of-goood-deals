@@ -3,11 +3,11 @@
     "link": "index.html",
     "alt": "Land of Oo"
 }, {
-    "image": "images/Asmodai2.jpeg",
-    "link": "product.html?p=2",
-    "alt": "product2"
-}, {
-    "image": "images/Asmodai3.jpeg",
+    "image": "images/jake-banner.jpg",
     "link": "product.html?p=3",
-    "alt": "product3"
+    "alt": "Jake"
+}, {
+    "image": "images/faces-banner.png",
+    "link": "product.html?p=2",
+    "alt": "Full Cast"
 }]
