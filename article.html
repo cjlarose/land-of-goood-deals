@@ -50,3 +50,20 @@ tempus quam. Proin sagittis, sapien quis dictum eleifend, turpis ante
 bibendum sem, ut facilisis ipsum dolor ut odio. Maecenas fermentum lorem nisl, 
 sed consectetur diam elementum sed. Cras ut libero a elit luctus aliquam ac 
 rutrum nulla. Aenean egestas egestas dignissim.</p>
+
+<ul id="blog-comments"></ul>
+
+<h3>Add Comment</h3>
+<form action="article.html" method="GET" id="add-comment-form">
+   <fieldset class="commborder">
+      <legend>Add Comment to Article</legend>
+      <label for="mailText">Email</label>
+      <input type="text" name="mailText" value="" id="mailText" /><br />
+      <label for="comm">Comment</label><br />
+      <textarea name="comment" id="comm"></textarea><br />
+      <input class="addcomm" type="submit" value="Add Comment" />
+   </fieldset>
+</form>
+
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/add_comment.js"></script>
