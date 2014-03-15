@@ -12,11 +12,11 @@ function validateForm(form) {
    var inputSec = $("#secD").val();
    var inputGround= $("#groundD").val();
 
-   var badName = new RegExp("[^A-Za-z\s]");
-   var badAdd = new RegExp("[^0-9A-Za-z\s]");
-   var badCity = new RegExp("[^A-Za-z]");
-   var goodEmail = new RegExp(".+@.+\..+");
-   var goodPhone = new RegExp("\d{3}\-\d{3}\-\d{4}");
+   var badName = /[^A-Za-z\s]/;
+   var badAdd = /[^0-9A-Za-z\s]/;
+   var badCity = /[^A-Za-z]/;
+   var goodEmail = /.+@.+\..+/;
+   var goodPhone = /\d{3}\-\d{3}\-\d{4}/;
 
    var isBadName = badName.test(inputName);
    var isBadAdd = badAdd.test(inputAdd);
@@ -56,7 +56,6 @@ function validateForm(form) {
 
 $(document).ready(function() {
     $("#shipping-form").submit(function(event) {
-        event.preventDefault();
         return validateForm(this); 
     });
 });
