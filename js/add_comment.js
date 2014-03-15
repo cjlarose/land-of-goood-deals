@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $("#add-comment-form").submit(function(e) {
-        e.preventDefault();
+
+    function addComment() {
         var email = $(this).find("#mailText").val();
         var content = $(this).find("#comm").val();
         var payload = {
@@ -26,6 +26,12 @@ $(document).ready(function() {
         }).error(function() {
             throw "Bad response from server";
         });
+    }
+
+    $("#add-comment-form").submit(function(e) {
+        e.preventDefault();
+        addComment.bind(this)();
         return false;
     });
+
 });
