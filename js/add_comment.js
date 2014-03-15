@@ -1,12 +1,16 @@
 $(document).ready(function() {
 
     function addComment() {
-        var email = $(this).find("#mailText").val();
-        var content = $(this).find("#comm").val();
+        var $mailText = $(this).find("#mailText");
+        var $comm = $(this).find("#comm");
+        var email = $mailText.val();
+        var content = $comm.val();
+
         var payload = {
             email: email,
             content: content
         };
+
         $.post("json/postcomment.php").done(function(data) {
             data = JSON.parse(data);
 
@@ -22,6 +26,9 @@ $(document).ready(function() {
                 .append($("<time>").append(new Date()))
                 .append($("<p>").append(content))
                 .appendTo("#blog-comments");
+
+            $mailText.val("");
+            $comm.val("");
 
         }).error(function() {
             throw "Bad response from server";
