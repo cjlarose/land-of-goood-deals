@@ -8,9 +8,9 @@ function validateForm(form) {
    var inputState = $("#states").val();
    var inputEmail = $("#emailText").val();
    var inputPhone = $("#phoneText").val();
-   var inputNext = $("#nextD").val();
-   var inputSec = $("#secD").val();
-   var inputGround= $("#groundD").val();
+   var inputNext = $("#nextD").is(":checked");
+   var inputSec = $("#secD").is(":checked");
+   var inputGround= $("#groundD").is(":checked");
 
    var badName = /[^A-Za-z\s]/;
    var badAdd = /[^0-9A-Za-z\s]/;
@@ -42,7 +42,7 @@ function validateForm(form) {
    } if (inputPhone !== "" && !isGoodPhone) {
       errormsg = errormsg + "If provided, enter an appropriate phone number of the form xxx-xxx-xxxx.\n";
       noError = false;
-   } if (inputNext === "" && inputSec === "" && inputGround === "") {
+   } if (!inputNext && !inputSec && !inputGround) {
       errormsg = errormsg + "Select a shipping option.\n";
       noError = false;
    }
