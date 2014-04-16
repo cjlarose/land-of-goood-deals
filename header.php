@@ -3,8 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Quality Adventure Time Merchandise">
-    <title>Land of Goood Deals: Quality Adventure Time Merchandise</title>
+    <meta name="description" content="<?php echo $description; ?>">
+    <title>Land of Goood Deals: <?php echo $title; ?></title>
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
