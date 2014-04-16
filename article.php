@@ -3,9 +3,6 @@
 	$title = "Article page";
 	$description = "This is an article";
 ?>
-    </header>
-    <div id="content">
-<!-- end header -->
 <h2>Added cool new products!</h2>
 <p>Posted on <time datetime="2014-01-30T00:00:00">January 30, 2014</time></p>
 
@@ -76,8 +73,6 @@ rutrum nulla. Aenean egestas egestas dignissim.</p>
 
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/add_comment.js"></script>
-<!-- begin footer -->
-    </div>
 <?php
 	include 'footer.php';
 ?>

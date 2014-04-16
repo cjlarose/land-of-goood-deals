@@ -3,9 +3,6 @@
 	$title = "Cart";
 	$description = "This is the cart";
 ?>
-    </header>
-    <div id="content">
-<!-- end header -->
 <h2>Shopping Cart</h2>
 <form method="GET" action="shipping.html">
 
@@ -70,8 +67,6 @@
 </form>
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/remove_element.js"></script>
-<!-- begin footer -->
-    </div>
 <?php
 	include 'footer.php';
 ?>

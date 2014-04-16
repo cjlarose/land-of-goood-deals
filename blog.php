@@ -3,9 +3,6 @@
 	$title = "Blog";
 	$description = "This is a blog";
 ?>
-    </header>
-    <div id="content">
-<!-- end header -->
 <h2>Latest Blog Entries</h2>
 <ul id="blog-entries">
     <li>
@@ -33,8 +30,6 @@
         <a href="article.html">[&hellip;] Read More</a>
     </li>
 </ul>
-<!-- begin footer -->
-    </div>
 <?php
 	include 'footer.php';
 ?>

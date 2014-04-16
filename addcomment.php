@@ -3,9 +3,6 @@
 	$title = "Add Comment";
 	$description = "Adds a comment";
 ?>
-    </header>
-    <div id="content">
-<!-- end header -->
 <h2>Add Comment</h2>
 <form action="article.html" method="GET">
    <fieldset class="commborder">
@@ -17,8 +14,6 @@
       <input class="addcomm" type="submit" value="Add Comment" />
    </fieldset>
 </form>
-<!-- begin footer -->
-    </div>
 <?php
 	include 'footer.php';
 ?>
