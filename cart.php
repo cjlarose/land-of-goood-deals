@@ -7,7 +7,7 @@
     <div id="content">
 <!-- end header -->
 <h2>Shopping Cart</h2>
-<form method="GET" action="shipping.html">
+<form method="GET" action="shipping.php">
 
 <table class="zebra-stripes" id="cart-items">
     <thead>
@@ -25,28 +25,28 @@
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a class="delete-item" href="remove.html">remove</a></td>
+            <td><a class="delete-item" href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>Product 2</td>
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a class="delete-item" href="remove.html">remove</a></td>
+            <td><a class="delete-item" href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>Product 3</td>
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a class="delete-item" href="remove.html">remove</a></td>
+            <td><a class="delete-item" href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>Product 4</td>
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a class="delete-item" href="remove.html">remove</a></td>
+            <td><a class="delete-item" href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>&nbsp;</td>

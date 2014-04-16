@@ -7,7 +7,7 @@
     <div id="content">
 <!-- end header -->
 <h2>Add Comment</h2>
-<form action="article.html" method="GET">
+<form action="article.php" method="GET">
    <fieldset class="commborder">
       <legend>Add Comment to Article</legend>
       <label for="mailText">Email</label>
