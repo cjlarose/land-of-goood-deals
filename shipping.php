@@ -6,7 +6,7 @@ include('header.php');
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/form_validation.js"></script>
 <h2>Shipping Information</h2>
-<form action="total.html" method="GET" id="shipping-form">
+<form action="total.php" method="GET" id="shipping-form">
    <fieldset class="ship">
       <legend>Shipping Information</legend>
       <label class="shiplabel" for="nameText">Name</label>
