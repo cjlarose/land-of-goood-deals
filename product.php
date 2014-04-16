@@ -1,4 +1,6 @@
 <?php
+$title = "Product Name";
+$description = "Product description";
 include('header.php');
 ?>
 <h2>Dating Tips from the Ice King by Simon Petrikov</h2>

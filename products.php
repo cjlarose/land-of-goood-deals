@@ -1,4 +1,6 @@
 <?php
+$title = "Adventure Time Merchandise";
+$description = "Best products ever";
 include('header.php');
 ?>
 <h2>Products</h2>

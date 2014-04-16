@@ -1,4 +1,6 @@
 <?php
+$title = "Thanks!";
+$description = "Order completed";
 include('header.php');
 ?>
 <h2>THANK YOU!</h2>

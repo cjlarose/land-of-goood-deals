@@ -1,4 +1,6 @@
 <?php
+$title = "Total";
+$description = "Total price of things purchased on the best site ever";
 include('header.php');
 ?>
 <h2>Total</h2>

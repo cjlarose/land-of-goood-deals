@@ -1,4 +1,6 @@
 <?php
+$title = "Quality Adventure Time Merchandise";
+$description = "Home page of the coolest website ever";
 include('header.php');
 ?>
 <a id="homepage-link" href="index.html">
