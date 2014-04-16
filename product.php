@@ -1,3 +1,8 @@
+<?php
+$title = "Product Name";
+$description = "Product description";
+include('header.php');
+?>
 <h2>Dating Tips from the Ice King by Simon Petrikov</h2>
 
 <aside id="product-sidebar">
@@ -61,3 +66,6 @@ tempus quam. Proin sagittis, sapien quis dictum eleifend, turpis ante
 bibendum sem, ut facilisis ipsum dolor ut odio. Maecenas fermentum lorem nisl, 
 sed consectetur diam elementum sed. Cras ut libero a elit luctus aliquam ac 
 rutrum nulla. Aenean egestas egestas dignissim.</p>
+<?php
+include('footer.php');
+?>

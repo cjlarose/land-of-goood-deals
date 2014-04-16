@@ -1,3 +1,8 @@
+<?php
+$title = "Adventure Time Merchandise";
+$description = "Best products ever";
+include('header.php');
+?>
 <h2>Products</h2>
 <ul id="product-list">
     <li>
@@ -17,3 +22,6 @@
         <a href="product.html">Jake plush toy</a>
     </li>
 </ul>
+<?php
+include('footer.php');
+?>

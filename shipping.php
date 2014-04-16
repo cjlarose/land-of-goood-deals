@@ -1,3 +1,8 @@
+<?php
+$title = "Shipping Information";
+$description = "Information about shipping quality merchandise";
+include('header.php');
+?>
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/form_validation.js"></script>
 <h2>Shipping Information</h2>
@@ -31,3 +36,6 @@
       <input type="submit" value="Submit" class="button-primary" onclick="return validateForm();" />
    </fieldset>
 </form>
+<?php
+include('footer.php');
+?>
