@@ -1,5 +1,5 @@
 <?php
-	include 'header.php'
+	include 'header.php';
 	$title = "Add Comment";
 	$description = "Adds a comment";
 ?>
@@ -20,5 +20,5 @@
 <!-- begin footer -->
     </div>
 <?php
-	include 'footer.php'
+	include 'footer.php';
 ?>

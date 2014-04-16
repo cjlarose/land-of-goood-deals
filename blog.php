@@ -1,5 +1,5 @@
 <?php
-	include 'header.php'
+	include 'header.php';
 	$title = "Blog";
 	$description = "This is a blog";
 ?>
@@ -36,5 +36,5 @@
 <!-- begin footer -->
     </div>
 <?php
-	include 'footer.php'
+	include 'footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-	include 'header.php'
+	include 'header.php';
 	$title = "About Us";
 	$description = "This is all about us";
 ?>
@@ -19,5 +19,5 @@ of the lives of Jake the Dog and Finn the Human. He wrote some of the html pages
     <footer>
         &copy; Chris LaRose &amp; Dave Fei
 <?php
-	include 'footer.php'
+	include 'footer.php';
 ?>

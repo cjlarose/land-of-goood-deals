@@ -1,5 +1,5 @@
 <?php
-	include 'header.php'
+	include 'header.php';
 	$title = "Article page";
 	$description = "This is an article";
 ?>
@@ -79,5 +79,5 @@ rutrum nulla. Aenean egestas egestas dignissim.</p>
 <!-- begin footer -->
     </div>
 <?php
-	include 'footer.php'
+	include 'footer.php';
 ?>
