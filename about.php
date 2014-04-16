@@ -1,3 +1,8 @@
+<?php
+	include 'header.php'
+	$title = "About Us";
+	$description = "This is all about us";
+?>
     <div id="content">
 <!-- end header -->
 <h2>About Us</h2>
@@ -13,3 +18,6 @@ of the lives of Jake the Dog and Finn the Human. He wrote some of the html pages
     </div>
     <footer>
         &copy; Chris LaRose &amp; Dave Fei
+<?php
+	include 'footer.php'
+?>

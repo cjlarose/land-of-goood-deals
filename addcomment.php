@@ -1,3 +1,8 @@
+<?php
+	include 'header.php'
+	$title = "Add Comment";
+	$description = "Adds a comment";
+?>
     </header>
     <div id="content">
 <!-- end header -->
@@ -14,3 +19,6 @@
 </form>
 <!-- begin footer -->
     </div>
+<?php
+	include 'footer.php'
+?>

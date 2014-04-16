@@ -1,3 +1,8 @@
+<?php
+	include 'header.php'
+	$title = "Blog";
+	$description = "This is a blog";
+?>
     </header>
     <div id="content">
 <!-- end header -->
@@ -30,3 +35,6 @@
 </ul>
 <!-- begin footer -->
     </div>
+<?php
+	include 'footer.php'
+?>

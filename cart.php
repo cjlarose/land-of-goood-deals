@@ -1,3 +1,8 @@
+<?php
+	include 'header.php'
+	$title = "Cart";
+	$description = "This is the cart";
+?>
     </header>
     <div id="content">
 <!-- end header -->
@@ -67,3 +72,6 @@
 <script src="js/remove_element.js"></script>
 <!-- begin footer -->
     </div>
+<?php
+	include 'footer.php'
+?>

@@ -1,3 +1,8 @@
+<?php
+	include 'header.php'
+	$title = "Article page";
+	$description = "This is an article";
+?>
     </header>
     <div id="content">
 <!-- end header -->
@@ -73,3 +78,6 @@ rutrum nulla. Aenean egestas egestas dignissim.</p>
 <script src="js/add_comment.js"></script>
 <!-- begin footer -->
     </div>
+<?php
+	include 'footer.php'
+?>
