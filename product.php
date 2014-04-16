@@ -8,7 +8,7 @@ include('header.php');
 <aside id="product-sidebar">
     <img src="images/ice-king.png" alt="Ice King" id="product-image" />
 
-    <form action="cart.html" method="GET" id="purchase-form">
+    <form action="cart.php" method="GET" id="purchase-form">
         <fieldset>
             <legend>Add to Cart</legend>
             <span class="price">$75.00</span><br />

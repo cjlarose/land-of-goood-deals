@@ -4,7 +4,7 @@ $description = "Total price of things purchased on the best site ever";
 include('header.php');
 ?>
 <h2>Total</h2>
-<form method="GET" action="thankyou.html">
+<form method="GET" action="thankyou.php">
 
 <table class="zebra-stripes">
     <thead>
@@ -22,28 +22,28 @@ include('header.php');
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a href="remove.html">remove</a></td>
+            <td><a href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>Product 2</td>
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a href="remove.html">remove</a></td>
+            <td><a href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>Product 3</td>
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a href="remove.html">remove</a></td>
+            <td><a href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>Product 4</td>
             <td>$15.00</td>
             <td>1</td>
             <td>$15.00</td>
-            <td><a href="remove.html">remove</a></td>
+            <td><a href="remove.php">remove</a></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
