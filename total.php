@@ -1,3 +1,6 @@
+<?php
+include('header.php');
+?>
 <h2>Total</h2>
 <form method="GET" action="thankyou.html">
 
@@ -67,3 +70,6 @@
 <input type="submit" value="Complete Order" name="complete_order" class="button-primary" />
 
 </form>
+<?php
+include('footer.php');
+?>
