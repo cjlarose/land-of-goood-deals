@@ -60,7 +60,7 @@ rutrum nulla. Aenean egestas egestas dignissim.</p>
 <ul id="blog-comments"></ul>
 
 <h3>Add Comment</h3>
-<form action="article.html" method="GET" id="add-comment-form">
+<form action="article.php" method="GET" id="add-comment-form">
    <fieldset class="commborder">
       <legend>Add Comment to Article</legend>
       <label for="mailText">Email</label>
