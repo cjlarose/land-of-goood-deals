@@ -10,23 +10,23 @@
 <body>
     <header>
         <h1>
-            <a href="index.html">Land of Goood Deals</a>
+            <a href="index.php">Land of Goood Deals</a>
             <span id="tagline">Quality <em>Adventure Time</em> Merchandise</span>
         </h1>
         <nav id="navigation">
             <ul>
                 <li>
-                    <a href="products.html">Products</a>
+                    <a href="products.php">Products</a>
                     <ul>
-                        <li><a href="product.html">Princess Bubblegum Stickers</a></li>
-                        <li><a href="product.html">Dating Tips from the Ice King</a></li>
-                        <li><a href="product.html">Finn's Hat</a></li>
-                        <li><a href="product.html">Jake Plush Toy</a></li>
+                        <li><a href="product.php">Princess Bubblegum Stickers</a></li>
+                        <li><a href="product.php">Dating Tips from the Ice King</a></li>
+                        <li><a href="product.php">Finn's Hat</a></li>
+                        <li><a href="product.php">Jake Plush Toy</a></li>
                     </ul>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="cart.php">Cart</a></li>
             </ul>
         </nav>
     </header>
