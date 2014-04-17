@@ -2,25 +2,25 @@
 $title = "Adventure Time Merchandise";
 $description = "Best products ever";
 include('header.php');
+include('helpers/products.php');
+include('helpers/db_connection.php');
+
+$p = new Products($db_connection);
+$products = $p->get_products();
+
 ?>
 <h2>Products</h2>
 <ul id="product-list">
+<?php
+foreach ($products as $product):
+?>
     <li>
-        <img src="images/princess-bubblegum.png" alt="Princess Bubblegum Stickers" />
-        <a href="product.php">Princess Bubblegum Stickers</a>
+        <img src="images/<?php echo $product->image; ; ?>" alt="<?php echo $product->name ?>" />
+        <a href="<?php echo $product->url(); ?>"><?php echo $product->name; ?></a>
     </li>
-    <li>
-        <img src="images/ice-king.png" alt="Ice King" />
-        <a href="product.php">Dating Tips from the Ice King</a>
-    </li>
-    <li>
-        <img src="images/finn.png" alt="Finn's Hat" />
-        <a href="product.php">Finn's Hat</a>
-    </li>
-    <li>
-        <img src="images/jake.png" alt="Jake plush toy" />
-        <a href="product.php">Jake plush toy</a>
-    </li>
+<?
+endforeach;
+?>
 </ul>
 <?php
 include('footer.php');
