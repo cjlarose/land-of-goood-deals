@@ -11,12 +11,12 @@ class Products {
                        $attributes['price']);
     }
 
-    function get_products() {
+    function get_all() {
         $stmt = $this->conn->query("SELECT * FROM product"); 
         return array_map(array('Products', 'make_product'), $stmt->fetchAll());
     }
 
-    function get_product($name) {
+    function get($name) {
         $sql = "SELECT * FROM product WHERE name = :name";
         $statement = $this->conn->prepare($sql);
         $statement->execute(array(':name' => $name));

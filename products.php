@@ -1,13 +1,13 @@
 <?php
-$title = "Adventure Time Merchandise";
-$description = "Best products ever";
-include('header.php');
 include('helpers/products.php');
 include('helpers/db_connection.php');
 
 $p = new Products($db_connection);
-$products = $p->get_products();
+$products = $p->get_all();
 
+$title = "Adventure Time Merchandise";
+$description = "Best products ever";
+include('header.php');
 ?>
 <h2>Products</h2>
 <ul id="product-list">
