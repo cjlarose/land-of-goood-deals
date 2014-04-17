@@ -302,3 +302,16 @@ header h1 #tagline {
 .carttotal {
    font-weight: bold;
 }
+
+/*
+ * Clearfix
+ * http://css-tricks.com/snippets/css/clear-fix/
+ */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}

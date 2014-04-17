@@ -24,6 +24,7 @@ include('header.php');
 ?>
 <h2><?php echo $product->name; ?></h2>
 
+<div class="clearfix">
 <aside id="product-sidebar">
     <img src="images/<?php echo $product->image; ?>" alt="<?php echo $product->name?>" id="product-image" />
 
@@ -39,6 +40,7 @@ include('header.php');
 </aside>
 
 <p><?php echo $product->description; ?></p>
+</div>
 
 <?php
 include('footer.php');
