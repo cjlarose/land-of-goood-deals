@@ -20,7 +20,10 @@ class Products {
         $sql = "SELECT * FROM product WHERE name = :name";
         $statement = $this->conn->prepare($sql);
         $statement->execute(array(':name' => $name));
-        return $statement->fetchOne();
+        $result = $statement->fetch();
+        if (!$result)
+            throw new Exception("Not found");
+        return Products::make_product($result);
     }
 
 }
@@ -38,6 +41,10 @@ class Product {
     function url() {
         $name = urlencode($this->name);
         return "product.php?product={$name}";
+    }
+
+    function __toString() {
+        return "Product({$this->name})";
     }
 
 }
