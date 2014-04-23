@@ -40,7 +40,7 @@ class Article {
 
 	function url() {
 		$name = urlencode($this->title);
-		return "article.html?article={$name}";
+		return "article.php?article={$name}";
 	}
 
 	function __toString() {
