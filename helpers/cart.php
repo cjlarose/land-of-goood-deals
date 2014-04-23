@@ -14,7 +14,7 @@ class Cart {
     }
 
     private function get_quantities() {
-        return in_array('products', $_SESSION) ? $_SESSION['products'] : array();
+        return array_key_exists('products', $_SESSION) ? $_SESSION['products'] : array();
     }
 
     function add_product($product_id, $quantity) {
