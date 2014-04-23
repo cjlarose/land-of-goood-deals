@@ -26,6 +26,13 @@ class Products {
         return Products::make_product($result);
     }
 
+    function get_many($product_ids) {
+        $sql = "SELECT * FROM product WHERE id IN :ids";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(array(':ids' => implode(',', $product_ids)));
+        return array_map(array('Products', 'make_product'), $stmt->fetchAll());
+    }
+
 }
 
 class Product {
