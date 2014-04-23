@@ -14,7 +14,9 @@ class Cart {
     }
 
     private function get_quantities() {
-        return array_key_exists('products', $_SESSION) ? $_SESSION['products'] : array();
+        if (!array_key_exists('products', $_SESSION))
+            $_SESSION['products'] = array();
+        return $_SESSION['products'];
     }
 
     function add_product($product_id, $quantity) {
@@ -40,11 +42,23 @@ class Cart {
         }
         return $items;
     }
+
+    public static function total_price($items) {
+        $total = 0;
+        foreach ($items as $item) {
+            $total += $item->total_price();
+        }
+        return $total;
+    }
 }
 
 class CartItem {
     function __construct($product, $quantity) {
         $this->product = $product;
         $this->quantity = $quantity;
+    }
+
+    function total_price() {
+        return $this->quantity * $this->product->price;
     }
 }
