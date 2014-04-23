@@ -1,11 +1,11 @@
 $(document).ready(function() {
     function removeCartItem(element) {
-        var product_name = element.find("td:first-child").text();
+        var product_id = element.data("product-id");
         var payload = {
-            product_name: product_name
+            product_id: product_id
         };
 
-        $.post("json/removefromcart.php", payload)
+        $.post("removefromcart.php", payload)
             .done(function() {
                 element.remove();
             })
