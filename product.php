@@ -28,12 +28,13 @@ include('header.php');
 <aside id="product-sidebar">
     <img src="images/<?php echo $product->image; ?>" alt="<?php echo $product->name; ?>" id="product-image" />
 
-    <form action="cart.php" method="GET" id="purchase-form">
+    <form action="cart.php" method="POST" id="purchase-form">
         <fieldset>
             <legend>Add to Cart</legend>
             <span class="price">$<?php echo $product->price; ?></span><br />
             <label for="quantity">Quantity</label>
             <input type="text" id="quantity" name="quantity" />
+            <input type="hidden" name="product_id" value="<?php echo $product->id; ?>" />
             <input type="submit" value="Add" name="add_to_cart" />
         </fieldset>
     </form>
