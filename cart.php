@@ -1,7 +1,25 @@
 <?php
-	include 'header.php';
-	$title = "Cart";
-	$description = "This is the cart";
+include_once("helpers/cart.php");
+
+$cart = new Cart();
+
+if (array_key_exists('product_id', $_POST)) {
+    $product_id = $_POST['product_id'];
+    $quantity = $_POST['quantity'];
+    if (!is_numeric($quantity)) {
+        echo "Bad request";
+        http_response_code(400);
+        exit();
+    }
+    $quantity = intval($quantity);
+    $cart->add_product($product_id, $quantity);
+}
+
+$items = $cart->get_items();
+
+$title = "Cart";
+$description = "This is the cart";
+include 'header.php';
 ?>
 <h2>Shopping Cart</h2>
 <form method="GET" action="shipping.php">
@@ -17,34 +35,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Product 1</td>
-            <td>$15.00</td>
-            <td>1</td>
-            <td>$15.00</td>
-            <td><a class="delete-item" href="remove.php">remove</a></td>
+        <?php
+        foreach ($items as $cart_item):
+        ?>
+        <tr data-product-id="<?php echo $cart_item->product->id; ?>" data-line-total="<?php echo $cart_item->total_price(); ?>">
+            <td><?php echo $cart_item->product->name; ?></td>
+            <td>$<?php echo number_format($cart_item->product->price, 2); ?></td>
+            <td><?php echo $cart_item->quantity; ?></td>
+            <td>$<?php echo number_format($cart_item->total_price(), 2); ?></td>
+            <td><a class="delete-item" href="#">remove</a></td>
         </tr>
-        <tr>
-            <td>Product 2</td>
-            <td>$15.00</td>
-            <td>1</td>
-            <td>$15.00</td>
-            <td><a class="delete-item" href="remove.php">remove</a></td>
-        </tr>
-        <tr>
-            <td>Product 3</td>
-            <td>$15.00</td>
-            <td>1</td>
-            <td>$15.00</td>
-            <td><a class="delete-item" href="remove.php">remove</a></td>
-        </tr>
-        <tr>
-            <td>Product 4</td>
-            <td>$15.00</td>
-            <td>1</td>
-            <td>$15.00</td>
-            <td><a class="delete-item" href="remove.php">remove</a></td>
-        </tr>
+        <?php
+        endforeach;
+        ?>
         <tr>
             <td>&nbsp;</td>
             <td></td>
@@ -56,7 +59,7 @@
             <td></td>
             <td></td>
             <td class="carttotal">Total</td>
-            <td class="carttotal">$235.95</td>
+            <td id="total_price" class="carttotal">$<?php echo number_format(Cart::total_price($items), 2); ?></td>
             <td></td>
         </tr>
     </tbody>
