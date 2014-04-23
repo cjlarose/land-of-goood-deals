@@ -38,7 +38,7 @@ include 'header.php';
         <?php
         foreach ($items as $cart_item):
         ?>
-        <tr data-product-id="<?php echo $cart_item->product->id; ?>">
+        <tr data-product-id="<?php echo $cart_item->product->id; ?>" data-line-total="<?php echo $cart_item->total_price(); ?>">
             <td><?php echo $cart_item->product->name; ?></td>
             <td>$<?php echo number_format($cart_item->product->price, 2); ?></td>
             <td><?php echo $cart_item->quantity; ?></td>
@@ -59,7 +59,7 @@ include 'header.php';
             <td></td>
             <td></td>
             <td class="carttotal">Total</td>
-            <td class="carttotal">$<?php echo number_format(Cart::total_price($items), 2); ?></td>
+            <td id="total_price" class="carttotal">$<?php echo number_format(Cart::total_price($items), 2); ?></td>
             <td></td>
         </tr>
     </tbody>
