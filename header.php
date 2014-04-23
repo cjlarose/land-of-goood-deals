@@ -1,10 +1,3 @@
-<?php
-include_once('helpers/products.php');
-include_once('helpers/db_connection.php');
-
-$p = new Products($db_connection);
-$products = $p->get_all();
-?>
 <!DOCTYPE html>
 <!-- Chris LaRose & Dave Fei -->
 <html>
@@ -22,18 +15,7 @@ $products = $p->get_all();
         </h1>
         <nav id="navigation">
             <ul>
-                <li>
-                    <a href="products.php">Products</a>
-                    <ul>
-                        <?php
-                        foreach ($products as $product):
-                        ?>
-                        <li><a href="<?php echo $product->url(); ?>"><?php echo $product->name; ?></a></li>
-                        <?php
-                        endforeach;
-                        ?>
-                    </ul>
-                </li>
+                <li><a href="products.php">Products</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="cart.php">Cart</a></li>

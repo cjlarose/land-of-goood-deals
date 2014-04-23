@@ -26,7 +26,7 @@ include('header.php');
 
 <div class="clearfix">
 <aside id="product-sidebar">
-    <img src="images/<?php echo $product->image; ?>" alt="<?php echo $product->name?>" id="product-image" />
+    <img src="images/<?php echo $product->image; ?>" alt="<?php echo $product->name; ?>" id="product-image" />
 
     <form action="cart.php" method="GET" id="purchase-form">
         <fieldset>
