@@ -14,7 +14,7 @@ class Cart {
     }
 
     private function get_quantities() {
-        if (!array_key_exists('products', $_SESSION))
+        if (!array_key_exists('products', $_SESSION) || $_SESSION['products'] == NULL)
             $_SESSION['products'] = array();
         return $_SESSION['products'];
     }
@@ -26,7 +26,7 @@ class Cart {
     }
 
     function remove_product($product_id) {
-        $quentities = $this->get_quantities();
+        $quantities = $this->get_quantities();
         unset($quantities[$product_id]);
         $this->set_quantities($quantities);
     }
