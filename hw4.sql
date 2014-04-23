@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `blog` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(64) NOT NULL,
+  `image` varchar(64) NOT NULL,
   `blog` varchar(2056) NOT NULL,
   `post_date` date NOT NULL,
   PRIMARY KEY (`id`)
