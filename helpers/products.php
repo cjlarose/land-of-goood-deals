@@ -27,6 +27,8 @@ class Products {
     }
 
     function get_many($product_ids) {
+        if (count($product_ids) == 0)
+            return [];
         $in_query = implode(',', array_fill(0, count($product_ids), '?'));
         $sql = "SELECT * FROM product WHERE id IN ({$in_query})";
         $stmt = $this->conn->prepare($sql);
