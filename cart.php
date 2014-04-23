@@ -38,12 +38,12 @@ include 'header.php';
         <?php
         foreach ($items as $cart_item):
         ?>
-        <tr>
+        <tr data-product-id="<?php echo $cart_item->product->id; ?>">
             <td><?php echo $cart_item->product->name; ?></td>
             <td>$<?php echo number_format($cart_item->product->price, 2); ?></td>
             <td><?php echo $cart_item->quantity; ?></td>
             <td>$<?php echo number_format($cart_item->total_price(), 2); ?></td>
-            <td><a class="delete-item" href="remove.php?id=<?php echo $cart_item->product->id; ?>">remove</a></td>
+            <td><a class="delete-item" href="#">remove</a></td>
         </tr>
         <?php
         endforeach;
