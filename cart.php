@@ -19,7 +19,7 @@ $items = $cart->get_items();
 
 $title = "Cart";
 $description = "This is the cart";
-include 'header.php';
+include 'include/header.php';
 ?>
 <h2>Shopping Cart</h2>
 <form method="GET" action="shipping.php">
@@ -71,5 +71,5 @@ include 'header.php';
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/remove_element.js"></script>
 <?php
-	include 'footer.php';
+	include 'include/footer.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $title = "Shipping Information";
 $description = "Information about shipping quality merchandise";
-include('header.php');
+include('include/header.php');
 ?>
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/form_validation.js"></script>
@@ -37,5 +37,5 @@ include('header.php');
    </fieldset>
 </form>
 <?php
-include('footer.php');
+include('include/footer.php');
 ?>

@@ -20,7 +20,7 @@ try {
 
 $title = $product->name;
 $description = $product->name;
-include('header.php');
+include('include/header.php');
 ?>
 <h2><?php echo $product->name; ?></h2>
 
@@ -44,5 +44,5 @@ include('header.php');
 </div>
 
 <?php
-include('footer.php');
+include('include/footer.php');
 ?>

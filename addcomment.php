@@ -1,5 +1,5 @@
 <?php
-	include 'header.php';
+	include 'include/header.php';
 	$title = "Add Comment";
 	$description = "Adds a comment";
 ?>
@@ -15,5 +15,5 @@
    </fieldset>
 </form>
 <?php
-	include 'footer.php';
+	include 'include/footer.php';
 ?>
