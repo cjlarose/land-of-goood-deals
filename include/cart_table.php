@@ -1,5 +1,5 @@
 <?php 
-function cart_table($cart_items) { 
+function cart_table($cart_items, $shipping_price = NULL) {
     ob_start();
 ?>
 <table class="zebra-stripes" id="cart-items">
@@ -33,6 +33,15 @@ function cart_table($cart_items) {
             <td></td>
             <td></td>
         </tr>
+        <?php if ($shipping_price != NULL): ?>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Shipping</td>
+            <td><?php echo number_format($shipping_price, 2); ?></td>
+            <td></td>
+        </tr>
+        <?php endif; ?>
         <tr>
             <td></td>
             <td></td>
