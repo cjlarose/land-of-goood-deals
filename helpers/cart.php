@@ -2,9 +2,10 @@
 include_once(dirname(__FILE__) . '/products.php');
 include_once(dirname(__FILE__) . '/db_connection.php');
 
+session_start();
+
 class CartSession {
     function __construct() {
-        session_start();
         global $db_connection;
         $this->products = new Products($db_connection);
     }
@@ -60,5 +61,49 @@ class CartItem {
 
     function total_price() {
         return $this->quantity * $this->product->price;
+    }
+}
+
+class Order {
+    function __construct($conn) {
+        $this->conn = $conn;
+    }
+
+    function save_order($name, $address, $city, $state, $email, $phone,
+        $shipping) {
+        $stmt = $this->conn->prepare("INSERT INTO `order` (name, address, city, state, email, phone, shipping, order_time, completed) VALUES (:name, :address, :city, :state, :email, :phone, :shipping, NOW(), 0)");
+        $success = $stmt->execute(array(
+            ':name' => $name,
+            ':address' => $address,
+            ':city' => $city,
+            ':state' => $state,
+            ':email' => $email,
+            ':phone' => $phone,
+            ':shipping' => $shipping
+        ));
+        $order_id = $this->conn->lastInsertId();
+        $_SESSION['last_order_id'] = $order_id;
+        return $order_id;
+    }
+
+    function add_products($order_id, $items) {
+        // LOL insert statements in a loop. Should probably be done in a
+        // single build insert query. But this is PHP. There are no rules
+        foreach ($items as $item) {
+            $stmt = $this->conn->prepare("INSERT INTO order_product (order_id, product_id, quantity) VALUES (:order_id, :product_id, :quantity)");
+            $stmt->execute(array(
+                ':order_id' => $order_id,
+                ':product_id' => $item->product->id,
+                ':quantity' => $item->quantity
+            ));
+        }
+    }
+
+    function mark_completed() {
+        $last_order_id = $_SESSION['last_order_id'];
+        $stmt = $this->conn->prepare("UPDATE `order` SET completed = 1 WHERE id = :order_id");
+        $stmt->execute(array(
+            ':order_id' => $last_order_id
+        ));
     }
 }
