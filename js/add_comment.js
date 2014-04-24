@@ -20,8 +20,10 @@ $(document).ready(function() {
                 throw "Malformed response";
 
             
-            if (data[0]["status"] != "good")
+            if (data[0]["status"] != "good") {
                 alert("Unable to publish comment");
+					 return;
+				}
 
             var name = email.indexOf("@") != -1 ? email.substring(0, email.indexOf("@")) : email;
 

@@ -27,7 +27,7 @@ class Blog {
 	}
 
 	function add_comment($blog_id, $email, $content) {
-		if (!isset($email) || !isset($content)) {
+		if (!isset($email) || !isset($content) || $email == "" || $content == "") {
 			throw new Exception("Enter some lumping text.");
 		} else {
 			$cleanEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -44,10 +44,10 @@ class Blog {
 				$sql = $sql . "VALUES (:blog_id, :cleanComment, :currentDate, :validEmail)"; 
 
 				$stmt = $this->conn->prepare($sql);
-				$stmt->bindValue(1, $blog_id, PDO::PARAM_INT);
-				$stmt->bindValue(2, $cleanComment, PDO::PARAM_STR);
-				$stmt->bindValue(3, $currentDate, PDO::PARAM_STR);
-				$stmt->bindValue(4, $validEmail, PDO::PARAM_STR);
+				$stmt->bindValue(':blog_id', $blog_id, PDO::PARAM_INT);
+				$stmt->bindValue(':cleanComment', $cleanComment, PDO::PARAM_STR);
+				$stmt->bindValue(':currentDate', $currentDate, PDO::PARAM_STR);
+				$stmt->bindValue(':validEmail', $validEmail, PDO::PARAM_STR);
 				$stmt->execute();
 			}
 		}
