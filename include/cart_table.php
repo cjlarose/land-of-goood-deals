@@ -1,7 +1,7 @@
 <?php 
 function cart_table($cart_items, $shipping_price = NULL) {
     ob_start();
-    $total_price = Cart::total_price($cart_items);
+    $total_price = CartSession::total_price($cart_items);
     if ($shipping_price)
         $total_price += $shipping_price;
 ?>
