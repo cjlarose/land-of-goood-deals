@@ -1,19 +1,18 @@
 <?php
-	include 'header.php';
-	$title = "Add Comment";
-	$description = "Adds a comment";
-?>
-<h2>Add Comment</h2>
-<form action="article.php" method="GET">
-   <fieldset class="commborder">
-      <legend>Add Comment to Article</legend>
-      <label for="mailText">Email</label>
-      <input type="text" name="mailText" value="" id="mailText" /><br />
-      <label for="comm">Comment</label><br />
-      <textarea name="comment" id="comm"></textarea><br />
-      <input class="addcomm" type="submit" value="Add Comment" />
-   </fieldset>
-</form>
-<?php
-	include 'footer.php';
-?>
+include "helpers/blog.php";
+include "helpers/db_connection.php";
+
+var_dump($_POST);
+echo '[{"status":"good"}]';
+
+$datID = $_POST["blog_id"];
+$datEmail = $_POST["email"];
+$datComment = $_POST["content"];
+$error = FALSE;
+
+$blog = new Blog($db_connection);
+try {
+	$blog->add_comment($datID, $datEmail, $datComment);
+} catch (Exception $e) {
+	echo '[{"status":"bad"}]';
+}

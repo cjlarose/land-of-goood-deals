@@ -3,15 +3,17 @@ $(document).ready(function() {
     function addComment() {
         var $mailText = $(this).find("#mailText");
         var $comm = $(this).find("#comm");
+		  var blog_id = $(this).find("input[name=blog_id]").val();
         var email = $mailText.val();
         var content = $comm.val();
 
         var payload = {
+				blog_id: blog_id,
             email: email,
             content: content
         };
 
-        $.post("json/postcomment.php", payload).done(function(data) {
+        $.post("addcomment.php", payload).done(function(data) {
             data = JSON.parse(data);
 
             if (!data.length)
