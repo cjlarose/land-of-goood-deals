@@ -41,7 +41,7 @@ function cart_table($cart_items, $shipping_price = NULL) {
             <td></td>
             <td></td>
             <td>Shipping</td>
-            <td>$<?php echo number_format($shipping_price, 2); ?></td>
+            <td data-shipping-total="<?php echo $shipping_price; ?>">$<?php echo number_format($shipping_price, 2); ?></td>
             <td></td>
         </tr>
         <?php endif; ?>

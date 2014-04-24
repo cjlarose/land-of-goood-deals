@@ -21,6 +21,10 @@ $(document).ready(function() {
             var lineTotal = parseFloat($(e).data('line-total'));
             total += lineTotal;
         });
+
+        var $shipping_cell = $('#cart-items td[data-shipping-total]');
+        if ($shipping_cell.length)
+            total += parseFloat($shipping_cell.data('shipping-total'));
         return total;
     }
 
