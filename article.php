@@ -38,6 +38,7 @@
       <input type="text" name="mailText" value="" id="mailText" /><br />
       <label for="comm">Comment</label><br />
       <textarea name="comment" id="comm"></textarea><br />
+		<input type="hidden" name="blog_id" value="<?php echo $article->id; ?>" />
       <input class="addcomm" type="submit" value="Add Comment" />
    </fieldset>
 </form>

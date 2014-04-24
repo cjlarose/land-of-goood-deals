@@ -26,6 +26,33 @@ class Blog {
 		return Blog::make_article($result);
 	}
 
+	function add_comment($blog_id, $email, $content) {
+		if (!isset($email) || !isset($content)) {
+			throw new Exception("Enter some lumping text.");
+		} else {
+			$cleanEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+			$validEmail = filter_var($cleanEmail, FILTER_VALIDATE_EMAIL);
+
+			$cleanComment = htmlentities(filter_var($content, FILTER_SANITIZE_STRING));
+
+			if (strlen($cleanComment) > 1024) {
+				throw new Exception("Comment too fricking big.");
+			} else {
+				$currentDate = date('Y-m-d');
+				$sql = "INSERT INTO `blog_comment` ";
+				$sql = $sql . "(blog_id, comment, post_date, email) ";
+				$sql = $sql . "VALUES (:blog_id, :cleanComment, :currentDate, :validEmail)"; 
+
+				$stmt = $this->conn->prepare($sql);
+				$stmt->bindValue(1, $blog_id, PDO::PARAM_INT);
+				$stmt->bindValue(2, $cleanComment, PDO::PARAM_STR);
+				$stmt->bindValue(3, $currentDate, PDO::PARAM_STR);
+				$stmt->bindValue(4, $validEmail, PDO::PARAM_STR);
+				$stmt->execute();
+			}
+		}
+	}
+
 }
 
 class Article {

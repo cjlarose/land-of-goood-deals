@@ -20,7 +20,7 @@ foreach ($articles as $article):
 		Posted on <?php echo $article->post_date; ;?><br />
 		<a href="<?php echo $article->url(); ?>">[&hellip;] Read More</a>
 	</li>
-<?
+<?php
 	endforeach;
 ?>
 </ul>
