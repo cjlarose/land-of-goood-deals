@@ -14,7 +14,7 @@ $options = array(
 
 $shipping_price = $options[$shipping_option];
 
-$cart = new Cart();
+$cart = new CartSession();
 $items = $cart->get_items();
 
 include('include/header.php');

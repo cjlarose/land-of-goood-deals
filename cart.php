@@ -1,7 +1,7 @@
 <?php
 include_once("helpers/cart.php");
 
-$cart = new Cart();
+$cart = new CartSession();
 
 if (array_key_exists('product_id', $_POST)) {
     $product_id = $_POST['product_id'];
