@@ -18,7 +18,7 @@
 		exit();
 	}
 
-	include 'header.php';
+	include 'include/header.php';
 	$title = "Article page";
 	$description = "This is an article";
 ?>
@@ -46,5 +46,5 @@
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/add_comment.js"></script>
 <?php
-	include 'footer.php';
+	include 'include/footer.php';
 ?>

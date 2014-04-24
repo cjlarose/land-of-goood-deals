@@ -7,7 +7,7 @@ $products = $p->get_all();
 
 $title = "Adventure Time Merchandise";
 $description = "Best products ever";
-include('header.php');
+include('include/header.php');
 ?>
 <h2>Products</h2>
 <ul id="product-list">
@@ -23,5 +23,5 @@ endforeach;
 ?>
 </ul>
 <?php
-include('footer.php');
+include('include/footer.php');
 ?>

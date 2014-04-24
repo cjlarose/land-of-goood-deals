@@ -5,7 +5,7 @@
 	$b = new Blog($db_connection);
 	$articles = $b->get_all();
 
-	include 'header.php';
+	include 'include/header.php';
 	$title = "Blog";
 	$description = "This is a blog";
 ?>
@@ -25,5 +25,5 @@ foreach ($articles as $article):
 ?>
 </ul>
 <?php
-	include 'footer.php';
+	include 'include/footer.php';
 ?>

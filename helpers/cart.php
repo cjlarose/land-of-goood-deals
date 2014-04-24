@@ -2,7 +2,7 @@
 include_once(dirname(__FILE__) . '/products.php');
 include_once(dirname(__FILE__) . '/db_connection.php');
 
-class Cart {
+class CartSession {
     function __construct() {
         session_start();
         global $db_connection;
