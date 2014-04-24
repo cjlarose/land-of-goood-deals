@@ -1,6 +1,9 @@
 <?php 
 function cart_table($cart_items, $shipping_price = NULL) {
     ob_start();
+    $total_price = Cart::total_price($cart_items);
+    if ($shipping_price)
+        $total_price += $shipping_price;
 ?>
 <table class="zebra-stripes" id="cart-items">
     <thead>
@@ -38,7 +41,7 @@ function cart_table($cart_items, $shipping_price = NULL) {
             <td></td>
             <td></td>
             <td>Shipping</td>
-            <td><?php echo number_format($shipping_price, 2); ?></td>
+            <td>$<?php echo number_format($shipping_price, 2); ?></td>
             <td></td>
         </tr>
         <?php endif; ?>
@@ -46,7 +49,7 @@ function cart_table($cart_items, $shipping_price = NULL) {
             <td></td>
             <td></td>
             <td class="carttotal">Total</td>
-            <td id="total_price" class="carttotal">$<?php echo number_format(Cart::total_price($cart_items), 2); ?></td>
+            <td id="total_price" class="carttotal">$<?php echo number_format($total_price, 2); ?></td>
             <td></td>
         </tr>
     </tbody>
