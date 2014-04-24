@@ -18,6 +18,8 @@
 		exit();
 	}
 
+    $comments = $b->get_all_comments($article->id);
+
 	include 'include/header.php';
 	$title = "Article page";
 	$description = "This is an article";
@@ -28,7 +30,15 @@
 <img src="images/<?php echo $article->image; ?>" alt="Blog Image" class="article-image" />
 <p><?php echo $article->blog; ?></p>
 <h3>Comments</h3>
-<ul id="blog-comments"></ul>
+<ul id="blog-comments">
+<?php foreach($comments as $comment): ?>
+    <li>
+        <span class="author"><?php echo Blog::extract_username($comment['email']); ?></span>
+        <time><?php echo $comment['post_date']; ?></time>
+        <p><?php echo $comment['comment']; ?></p>
+    </li>
+<?php endforeach; ?>
+</ul>
 
 <h3>Add Comment</h3>
 <form action="article.php" method="GET" id="add-comment-form">

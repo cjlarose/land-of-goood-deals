@@ -53,6 +53,18 @@ class Blog {
 		}
 	}
 
+    function get_all_comments($blog_id) {
+        $sql = "SELECT * FROM `blog_comment` WHERE blog_id = :blog_id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(array(':blog_id' => $blog_id));
+        return $stmt->fetchAll();
+    }
+
+    static function extract_username($email) {
+        $index = strpos($email, '@');
+        return substr($email, 0, $index);
+    }
+
 }
 
 class Article {
