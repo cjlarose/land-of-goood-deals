@@ -44,7 +44,10 @@ class Blog {
 				$sql = $sql . "VALUES (:blog_id, :cleanComment, :currentDate, :validEmail)"; 
 
 				$stmt = $this->conn->prepare($sql);
-				$stmt->bindValue(1, $cleanComment, PDO::PARAM_STR);
+				$stmt->bindValue(1, $blog_id, PDO::PARAM_INT);
+				$stmt->bindValue(2, $cleanComment, PDO::PARAM_STR);
+				$stmt->bindValue(3, $currentDate, PDO::PARAM_STR);
+				$stmt->bindValue(4, $validEmail, PDO::PARAM_STR);
 				$stmt->execute();
 			}
 		}
