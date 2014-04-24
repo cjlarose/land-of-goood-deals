@@ -1,11 +1,12 @@
 <?php
 include_once("helpers/cart.php");
+include_once("helpers/db_connection.php");
 include('include/cart_table.php');
 
 $title = "Total";
 $description = "Total price of things purchased on the best site ever";
 
-$shipping_option = $_GET['date'];
+$shipping_option = $_POST['date'];
 $options = array(
     'next' => 12.00,
     'sec' => 6.00,
@@ -16,6 +17,10 @@ $shipping_price = $options[$shipping_option];
 
 $cart = new CartSession();
 $items = $cart->get_items();
+
+$order = new Order($db_connection);
+$order_id = $order->save_order($_POST['nameText'], $_POST['addText'], $_POST['cityText'], $_POST['state'], $_POST['emailText'], $_POST['phoneText'], $_POST['date']);
+$order->add_products($order_id, $items);
 
 include('include/header.php');
 ?>
