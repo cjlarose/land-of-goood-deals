@@ -47,6 +47,7 @@ p {
  */
 header {
     padding: 1em 0;
+    height: 190px;
 }
 
 header h1 {
@@ -64,59 +65,9 @@ header h1 #tagline {
     font-size: .5em;
 }
 
-/*
- * Navigation (Suckerfish: http://alistapart.com/article/dropdowns)
- */
-
-#navigation ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    background-color: hsl(102, 27%, 47%);
-}
-
-#navigation li {
-    display: inline-block;
-    /* Changed from suckerfish, because modern IE understands inline-block and 
-       suckerfish is from 2003 */
-    position: relative;
-    width: 10em;
-}
-
-#navigation li a {
-    display: block;
-    padding: .5em 1em;
-    text-decoration: none;
-    color: #fff;
-}
-
-#navigation > ul > li:hover {
-    background-color: hsl(0, 0%, 20%);
-}
-
-#navigation li ul {
-    display: none;
-    position: absolute; 
-    top: 1em;
-    left: 0;
-    z-index: 10;
-}
-
-#navigation li > ul {
-    top: auto;
-    left: auto;
-}
-
-#navigation li > ul li {
-    background-color: hsl(102, 17%, 47%);
-}
-
-#navigation li > ul li:hover {
-    background-color: hsl(0, 0%, 40%);
-}
-
-#navigation li:hover ul {
-    display: block;
+/* Navigation */
+#navigation {
+    font-size: .8em;
 }
 
 /*
